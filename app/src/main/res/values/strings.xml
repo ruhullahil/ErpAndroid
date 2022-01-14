@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sales Man</string>
+    <string name="login">Log In</string>
+    <string name="password">Password</string>
+    <string name="name_of_user">Name:</string>
+    <string name="name_of_point">Total Sales:</string>
+
+</resources>
