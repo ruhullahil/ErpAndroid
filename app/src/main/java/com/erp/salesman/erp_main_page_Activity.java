@@ -2,7 +2,10 @@ package com.erp.salesman;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +15,25 @@ public class erp_main_page_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_erp_main_page);
+
+        ImageView sale = findViewById(R.id.salepage);
+        sale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(erp_main_page_Activity.this, SalesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView stokes = findViewById(R.id.stock_in_erp_page);
+        stokes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(erp_main_page_Activity.this, stoke_Activity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -24,6 +46,8 @@ public class erp_main_page_Activity extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     public void onBackPressed() {

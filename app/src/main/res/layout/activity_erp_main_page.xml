@@ -83,6 +83,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/salepage"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:src="@drawable/ic_baseline_add_shopping_cart_24" />
@@ -153,6 +154,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/stock_in_erp_page"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:src="@drawable/ic_baseline_maps_home_work_24" />
