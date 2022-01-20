@@ -25,7 +25,8 @@ public class stoke_Activity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view_stock_page);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        list = new  ArrayList<stock_data> list;
+        list = new  ArrayList<stock_data>();
+        myadapter = new stock_dada_adapter(stoke_Activity.this,list);
+        recyclerView.setAdapter(myadapter);
     }
 }

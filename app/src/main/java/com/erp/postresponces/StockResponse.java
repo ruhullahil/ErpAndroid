@@ -8,37 +8,41 @@ import java.util.List;
 public class StockResponse {
     @SerializedName("product_id")
     @Expose
-    private List<String> product_id;
-    @SerializedName("location_id")
+    private int product_id;
+    @SerializedName("location")
     @Expose
-    private List<String>location_id;
+    private String location;
     @SerializedName("quantity")
     @Expose
     private Double quantity;
+    @SerializedName("product")
+    @Expose
+    private String product;
 
-    public StockResponse(List<String> product_id, List<String> location_id, Double quantity) {
+    public StockResponse(int product_id, String location, Double quantity, String product) {
         this.product_id = product_id;
-        this.location_id = location_id;
+        this.location = location;
         this.quantity = quantity;
+        this.product = product;
     }
 
     public StockResponse() {
     }
 
-    public List<String> getProduct_id() {
+    public int getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(List<String> product_id) {
+    public void setProduct_id(int product_id) {
         this.product_id = product_id;
     }
 
-    public List<String> getLocation_id() {
-        return location_id;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLocation_id(List<String> location_id) {
-        this.location_id = location_id;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public Double getQuantity() {
@@ -47,5 +51,13 @@ public class StockResponse {
 
     public void setQuantity(Double quantity) {
         this.quantity = quantity;
+    }
+
+    public String getProduct() {
+        return product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
     }
 }

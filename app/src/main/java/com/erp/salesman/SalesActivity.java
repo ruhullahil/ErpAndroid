@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.erp.extraclass.sales_adapter;
 import com.erp.extraclass.salesview_user;
@@ -30,6 +32,7 @@ public class SalesActivity extends AppCompatActivity {
         setadapter();
 
 
+
     }
 
     private void setadapter() {
@@ -44,8 +47,22 @@ public class SalesActivity extends AppCompatActivity {
 
     private void setuseinfo() {
 
-//        listuser.add(new salesview_user("bear"));
-
+        listuser.add(new salesview_user("bear","5","200"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
+        listuser.add(new salesview_user("Red bull", "5", "300"));
 
 
     }

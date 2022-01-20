@@ -4,14 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/drawable/arrow_right.xml" value="0.2203125" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml" value="0.2203125" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/drawable/info_passwod.xml" value="0.2203125" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/drawable/login_img_background_color.xml" value="0.2203125" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_clients.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_clients_creation.xml" value="0.25" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_erp_main_page.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_sales.xml" value="0.5" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_order.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_sales.xml" value="0.4083333333333333" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_stock_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/activity_stoke.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/clientsview.xml" value="0.33" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/list_view_activity.xml" value="0.455988455988456" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/orderview.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/salesview.xml" value="0.25" />
+        <entry key="..\:/Users/ruhul/AndroidStudioProjects/SalesMan/app/src/main/res/layout/stockCart.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
