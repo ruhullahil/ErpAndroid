@@ -4,7 +4,13 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.erp.postresponces.ConformationResponse;
+import com.erp.postresponces.CreateCustomer;
+import com.erp.postresponces.CustomerResponse;
+import com.erp.postresponces.DeliveryResponce;
+import com.erp.postresponces.InvoiceResponce;
 import com.erp.postresponces.LoginResponceClass;
+import com.erp.postresponces.SaleOrderResponse;
 import com.erp.postresponces.StockResponse;
 import com.erp.postresponces.getSaleManInfo;
 import com.erp.postresponces.stockLocatonResponce;
@@ -40,6 +46,9 @@ public class RepositoryPoints {
                 Log.d("_____False :", "come here 2");
                 if (response.isSuccessful()) {
                     loginData.setValue(response.body());
+                }
+                else {
+                    loginData.setValue(null);
                 }
 
             }
@@ -78,7 +87,7 @@ public class RepositoryPoints {
 
     public MutableLiveData<stockLocatonResponce> getStockData(String Token, int location) {
         MutableLiveData<stockLocatonResponce> stockData = new MutableLiveData<>();
-        Log.d("_____False :", "come here "+location);
+        Log.d("_____False :", "come here " + location);
         retrofitEndPoin.getLocationStock(Token, location).enqueue(new Callback<stockLocatonResponce>() {
             @Override
             public void onResponse(Call<stockLocatonResponce> call, Response<stockLocatonResponce> response) {
@@ -96,6 +105,189 @@ public class RepositoryPoints {
             }
         });
         return stockData;
+
+    }
+
+    public MutableLiveData<CustomerResponse> getCustomer(String Token) {
+        MutableLiveData<CustomerResponse> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getCustomer(Token).enqueue(new Callback<CustomerResponse>() {
+            @Override
+            public void onResponse(Call<CustomerResponse> call, Response<CustomerResponse> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CustomerResponse> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<InvoiceResponce> getInvoices(String Token) {
+        MutableLiveData<InvoiceResponce> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getInvoices(Token).enqueue(new Callback<InvoiceResponce>() {
+            @Override
+            public void onResponse(Call<InvoiceResponce> call, Response<InvoiceResponce> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<InvoiceResponce> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<InvoiceResponce> getInvoice(String Token,int id) {
+        MutableLiveData<InvoiceResponce> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getInvoice(Token,id).enqueue(new Callback<InvoiceResponce>() {
+            @Override
+            public void onResponse(Call<InvoiceResponce> call, Response<InvoiceResponce> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<InvoiceResponce> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<DeliveryResponce> getDeliverys(String Token) {
+        MutableLiveData<DeliveryResponce> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getDeliverys(Token).enqueue(new Callback<DeliveryResponce>() {
+            @Override
+            public void onResponse(Call<DeliveryResponce> call, Response<DeliveryResponce> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DeliveryResponce> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<DeliveryResponce> getDelivery(String Token,int id) {
+        MutableLiveData<DeliveryResponce> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getDelevery(Token,id).enqueue(new Callback<DeliveryResponce>() {
+            @Override
+            public void onResponse(Call<DeliveryResponce> call, Response<DeliveryResponce> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DeliveryResponce> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<ConformationResponse> validateDelivery(String Token, int id) {
+        MutableLiveData<ConformationResponse> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.validateDelevery(Token,id).enqueue(new Callback<ConformationResponse>() {
+            @Override
+            public void onResponse(Call<ConformationResponse> call, Response<ConformationResponse> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ConformationResponse> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+
+    public MutableLiveData<SaleOrderResponse> getOrders(String Token) {
+        MutableLiveData<SaleOrderResponse> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.getSaleOrder(Token).enqueue(new Callback<SaleOrderResponse>() {
+            @Override
+            public void onResponse(Call<SaleOrderResponse> call, Response<SaleOrderResponse> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SaleOrderResponse> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
+
+    }
+    public MutableLiveData<ConformationResponse> createCustomer(String Token, CreateCustomer customer) {
+        MutableLiveData<ConformationResponse> customerData = new MutableLiveData<>();
+
+        retrofitEndPoin.createCustomer(Token,customer).enqueue(new Callback<ConformationResponse>() {
+            @Override
+            public void onResponse(Call<ConformationResponse> call, Response<ConformationResponse> response) {
+                if (response.isSuccessful()) {
+//                    Log.d("_____False :",response.body().getSuccess().toString() );
+                    customerData.setValue(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ConformationResponse> call, Throwable t) {
+                Log.d("_____False :", t.getMessage());
+                customerData.setValue(null);
+
+            }
+        });
+        return customerData;
 
     }
 

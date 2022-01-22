@@ -13,6 +13,24 @@
         android:theme="@style/Theme.SalesMan"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CreditCollection"
+            android:exported="false" />
+        <activity
+            android:name=".creditList"
+            android:exported="false" />
+        <activity
+            android:name=".saleOrderList"
+            android:exported="false" />
+        <activity
+            android:name=".DeleveryDetails"
+            android:exported="false" />
+        <activity
+            android:name=".invoiceDetails"
+            android:exported="false" />
+        <activity
+            android:name=".invoices"
+            android:exported="false" />
+        <activity
             android:name=".stockList"
             android:exported="false" />
         <activity

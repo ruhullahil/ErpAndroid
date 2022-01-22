@@ -1,29 +1,25 @@
 package com.erp.postresponces;
 
-import com.erp.extraclass.client_user;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class CustomerResponse {
+public class SaleOrderResponse {
     @SerializedName("success")
     @Expose
     private Boolean success;
     @SerializedName("data")
     @Expose
-    private ArrayList<client_user> data;
+    private ArrayList<SOOrder> data;
     @SerializedName("type")
     @Expose
     private String Type;
 
-    public CustomerResponse(Boolean success, ArrayList<client_user> data, String type) {
+    public SaleOrderResponse(Boolean success, ArrayList<SOOrder> data, String type) {
         this.success = success;
         this.data = data;
         Type = type;
-    }
-
-    public CustomerResponse() {
     }
 
     public Boolean getSuccess() {
@@ -34,11 +30,11 @@ public class CustomerResponse {
         this.success = success;
     }
 
-    public ArrayList<client_user> getData() {
+    public ArrayList<SOOrder> getData() {
         return data;
     }
 
-    public void setData(ArrayList<client_user> data) {
+    public void setData(ArrayList<SOOrder> data) {
         this.data = data;
     }
 
@@ -48,5 +44,8 @@ public class CustomerResponse {
 
     public void setType(String type) {
         Type = type;
+    }
+
+    public SaleOrderResponse() {
     }
 }

@@ -77,7 +77,7 @@ public class erp_main_page_Activity extends AppCompatActivity {
         sale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(erp_main_page_Activity.this, SalesActivity.class);
+                Intent intent = new Intent(erp_main_page_Activity.this, saleOrderList.class);
                 startActivity(intent);
             }
         });
@@ -109,6 +109,24 @@ public class erp_main_page_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageView invoice = findViewById(R.id.erp_main_invoices);
+        invoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(erp_main_page_Activity.this, invoices.class);
+                startActivity(intent);
+            }
+        });
+        ImageView collection =  findViewById(R.id.payment_collection);
+        collection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(erp_main_page_Activity.this, creditList.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

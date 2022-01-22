@@ -6,24 +6,24 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class CustomerResponse {
+public class InvoiceResponce {
     @SerializedName("success")
     @Expose
     private Boolean success;
     @SerializedName("data")
     @Expose
-    private ArrayList<client_user> data;
+    private ArrayList<InvoiceOrders> data;
     @SerializedName("type")
     @Expose
     private String Type;
 
-    public CustomerResponse(Boolean success, ArrayList<client_user> data, String type) {
+    public InvoiceResponce(Boolean success, ArrayList<InvoiceOrders> data, String type) {
         this.success = success;
         this.data = data;
         Type = type;
     }
 
-    public CustomerResponse() {
+    public InvoiceResponce() {
     }
 
     public Boolean getSuccess() {
@@ -34,11 +34,11 @@ public class CustomerResponse {
         this.success = success;
     }
 
-    public ArrayList<client_user> getData() {
+    public ArrayList<InvoiceOrders> getData() {
         return data;
     }
 
-    public void setData(ArrayList<client_user> data) {
+    public void setData(ArrayList<InvoiceOrders> data) {
         this.data = data;
     }
 
